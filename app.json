@@ -1,0 +1,42 @@
+{
+    "name": "Aditya VC Player",
+    "description": "Telegram Personal Voice Chat Userbot",
+    "logo": "https://telegra.ph/file/4414421c401a9b604267b.jpg",
+    "keywords": [
+        "Music",
+        "VC Player",
+        "Telegram Bot",
+        "AdityaVcPlayer"
+    ],
+    "repository": "https://github.com/ImJanindu/vcplayerbot",
+    "success_url": "https://t.me/AdityaServer",
+    "env": {
+        "STRING_SESSION": {
+            "description": "Pyrogram String Session",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your Api Hash",
+            "value": ""
+        },
+        "APP_ID": {
+            "description": "Your App ID",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
