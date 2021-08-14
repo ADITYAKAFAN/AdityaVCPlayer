@@ -100,7 +100,7 @@ async def join_voice_chat(client, message):
         await message.reply('lel error!')
         return
     VOICE_CHATS[chat_id] = group_call
-    await message.reply('Joined the Voice Chat ✅')
+    await message.reply('✅ Sʋccɘsʆʋɭɭƴ Joɩŋɘɗ tʜɘ Voɩcɘ Cʜʌt')
 
 
 @app.on_message(filters.command('leave') & self_or_contact_filter)
@@ -109,7 +109,7 @@ async def leave_voice_chat(client, message):
     group_call = VOICE_CHATS[chat_id]
     await group_call.stop()
     VOICE_CHATS.pop(chat_id, None)
-    await message.reply('Left Voice Chat ✅')
+    await message.reply('❎ Sʋccɘsʆʋɭɭƴ ɭɘʆt tʜɘ Voɩcɘ Cʜʌt')
 
 app.start()
 print('>>> ADITYA VC USERBOT STARTED')
