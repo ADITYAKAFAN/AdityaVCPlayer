@@ -32,7 +32,7 @@ self_or_contact_filter = filters.create(
 # start message
 @app.on_message(filters.command('start'))
 async def start(client, message):
-    await message.reply("🔊 Aditya Vc Player Running ...",
+    await message.reply("🔊 Ʌɖiʈyʌ Vc Pɭɑyɘɽ Ɽʊŋŋiŋɠ ...",
                         disable_web_page_preview=True)
 
 # ping checker
@@ -80,7 +80,7 @@ async def stop_playing(_, message):
     group_call = VOICE_CHATS[message.chat.id]
     group_call.stop_playout()
     os.remove('downloads/vcbot/input.raw')
-    await message.reply('Stopped Playing ❌')
+    await message.reply('❌ Sʋƈƈɘssƒʋɭɭƴ Sʈøƥƥɘɗ Pɭʌyinɡ ❗')
 
 
 @app.on_message(filters.command('join') & self_or_contact_filter)
