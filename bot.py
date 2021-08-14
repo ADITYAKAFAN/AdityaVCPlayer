@@ -54,7 +54,7 @@ async def play_track(client, message):
     )
     audio = message.reply_to_message.audio
     audio_original = await message.reply_to_message.download()
-    a = await message.reply('Downloading...')
+    a = await message.reply('Ɗøwŋɭøɑɗiŋɠ...')
     ffmpeg.input(audio_original).output(
         input_filename,
         format='s16le',
@@ -63,7 +63,7 @@ async def play_track(client, message):
     ).overwrite_output().run()
     os.remove(audio_original)
     if VOICE_CHATS and message.chat.id in VOICE_CHATS:
-        text = f'▶️ Playing **{audio.title}** here by Aditya ...'
+        text = f'▶️ Pɭɑyinɠ **{audio.title}** ɧɘɽɘ ɓy Ʌɗiʈyʌ...'
     else:
         try:
             group_call = GroupCall(client, input_filename)
@@ -72,7 +72,7 @@ async def play_track(client, message):
             await message.reply('Group Call doesnt exist')
             return
         VOICE_CHATS[message.chat.id] = group_call
-    await a.edit(f'▶️ Playing **{audio.title}** here by Aditya ...')
+    await a.edit(f'▶️ Pɭʌyiŋɠ **{audio.title}** ɧɘɽɘ ɓy Ʌɗiʈyʌ...')
 
 
 @app.on_message(filters.command('stop') & self_or_contact_filter)
@@ -90,7 +90,7 @@ async def join_voice_chat(client, message):
         'input.raw',
     )
     if message.chat.id in VOICE_CHATS:
-        await message.reply('Already joined to Voice Chat 🛠')
+        await message.reply('✅ Ʌɭɽɘɑɗy Jøiŋɘɗ tɧɘ Vøicɘ Cʜʌt')
         return
     chat_id = message.chat.id
     try:
@@ -112,7 +112,7 @@ async def leave_voice_chat(client, message):
     await message.reply('❎ Sʋccɘsʆʋɭɭƴ ɭɘʆt tʜɘ Voɩcɘ Cʜʌt')
 
 app.start()
-print('>>> ADITYA VC USERBOT STARTED')
+print('>>> Ʌɗiʈyʌ Vc Usɘɽɓøʈ Sʈʌɽʈɘɗ')
 idle()
 app.stop()
-print('\n>>> ADITYA VC USERBOT STOPPED')
+print('\n>>> Ʌɗiʈyʌ Vc Usɘɽɓøʈ Sʈøƥƥɘɗ')
