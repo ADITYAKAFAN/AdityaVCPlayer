@@ -22,7 +22,7 @@
 
 ### Host Bot
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AdityaServer/AdityaVCPlayer)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ADITYAKAFAN/AdityaVCPlayer)
 
 ### Pyrogram String Session
 - [String session here](https://replit.com/@dashezup/generate-pyrogram-session-string)
