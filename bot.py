@@ -83,6 +83,13 @@ async def stop_playing(_, message):
     await message.reply('❌ Sʋƈƈɘssƒʋɭɭƴ Sʈøƥƥɘɗ Pɭʌyinɡ ❗')
 
     
+@app.on_message(filters.command('pause') & self_or_contact_filter) 
+async def pause_playing(_, message):
+    group_call = VOICE_CHATS[message.chat.id]
+    group_call.pause_playout() 
+    os.remove('downloads/vcbot/input.raw') 
+    await message.reply('Ruk gya 🤣') 
+               
 @app.on_message(filters.command('join') & self_or_contact_filter)
 async def join_voice_chat(client, message):
     input_filename = os.path.join(
