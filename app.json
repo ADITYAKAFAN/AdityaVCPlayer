@@ -8,7 +8,7 @@
         "Telegram Bot",
         "AdityaVcPlayer"
     ],
-    "repository": "https://github.com/ADITYAKAFAN/AdityaVCPlayer",
+    "repository": "https://github.com/AdityaServer/AdityaVCPlayer",
     "success_url": "https://t.me/AdityaServer",
     "env": {
         "STRING_SESSION": {
