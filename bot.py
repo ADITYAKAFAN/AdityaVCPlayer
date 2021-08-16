@@ -113,7 +113,7 @@ async def join_voice_chat(client, message):
         group_call = GroupCall(client, input_filename)
         await group_call.start(chat_id)
     except RuntimeError:
-        await message.reply('lel error!')
+        await message.reply('VC Øŋ kʌɽɭɘ')
         return
     VOICE_CHATS[chat_id] = group_call
     await message.reply('✅ Sʋccɘsʆʋɭɭƴ Joɩŋɘɗ tʜɘ Voɩcɘ Cʜʌt')
